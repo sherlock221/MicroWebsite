@@ -1,0 +1,23 @@
+@charset "utf-8";
+/**
+ * sherlock221b
+ * rem常用设计函数
+ */
+
+$fontBaseSize : 1;
+
+
+
+//走设计稿需要缩小2倍数
+@function rem($val){
+  @return $val / $fontBaseSize   /2 *  1px;
+}
+
+
+//直接使用(设备原尺寸)
+@function rem-use($val){
+  @return $val / $fontBaseSize   *  1px;
+}
+
+
+
