@@ -68,7 +68,13 @@ Micro.config(
               //图标 menu
               .state('app.s1.menu.icon',{
                   url: '/icon',
-                  templateUrl: 'tpl/menu/menu-icon.html?v='+VERSION.vs
+                  views: {
+                      "@app.s1": {
+                          controller : "MenuIconCtrl",
+                          templateUrl: 'tpl/menu/menu-icon.html?v='+VERSION.vs
+                      }
+                  }
+
               })
               //自定义 menu
               .state('app.s1.menu.custom',{

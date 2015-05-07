@@ -33,23 +33,38 @@
 
 
     <!-- 模板 -->
+    <script  type="text/javascript" src="js/controllers/base/main.ctrl.js"></script>
     <script  type="text/javascript" src="js/controllers/index/index.ctrl.js"></script>
     <script  type="text/javascript" src="js/controllers/list/list.card.ctrl.js"></script>
     <script  type="text/javascript" src="js/controllers/list/list.image.ctrl.js"></script>
     <script  type="text/javascript" src="js/controllers/list/list.text.ctrl.js"></script>
 
+
     <script  type="text/javascript" src="js/controllers/menu/menu.custome.ctrl.js"></script>
     <script  type="text/javascript" src="js/controllers/menu/menu.icon.ctrl.js"></script>
     <script  type="text/javascript" src="js/controllers/detail/detail.imgText.ctrl.js"></script>
-
 
     <!-- 打包业务-->
     <!--<script type="text/javascript" src="dist/js/all.js?v=8.3"></script>-->
 
 </head>
 
-<body ng-app="Micro">
+<body ng-app="Micro" ng-controller="MainCtrl">
     <section ui-view></section>
 </body>
+<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
 
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
 </html>

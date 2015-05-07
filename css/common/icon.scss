@@ -52,22 +52,30 @@ $iconHeight : rem(78);
 
 
 .icon-compass{
-  background-position:  0 rem(-520);
+  background-position:  0 rem(-560);
   width: $iconWidth;
   height: $iconHeight;
 }
 
 .icon-telbook{
-  background-position:  0 rem(-600);
+  background-position:  0 rem(-640);
   width: $iconWidth;
   height: $iconHeight;
 }
 
 .icon-letter{
-  background-position:  0 rem(-680);
+  background-position:  0 rem(-720);
   width: $iconWidth;
   height: $iconHeight;
 }
+
+.icon-teacher{
+  background-position:  rem(-72) rem(-80);
+  width: $iconWidth;
+  height: $iconHeight;
+}
+
+
 
 .phone-img{
   background-position:  rem(-764) 0;

@@ -2,7 +2,9 @@
  * Menu 菜单
  */
 
-Micro.controller('MneuIconCtrl', function($scope,$rootScope) {
+Micro.controller('MenuIconCtrl', function($scope,$rootScope) {
 
+    $rootScope.showHeader = false;
+    console.log("menu..");
 
 });

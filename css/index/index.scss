@@ -4,14 +4,22 @@
 .menu{
   overflow: hidden;
   margin-top: rem(79);
+
+  margin-left: rem(-15);
+//  margin-right: rem(-15);
+
    li{
      float: left;
-     margin-right: rem(30);
+
      margin-bottom: rem(60);
 
-     &:nth-child(4n){
-       margin-right: 0;
-     }
+     padding-right: rem(15);
+     padding-left: rem(15);
+
+
+//     &:nth-child(4n){
+//       margin-right: 0;
+//     }
 
      a{
 
