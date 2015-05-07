@@ -3,11 +3,11 @@
  */
 
 Micro
-    .factory("AjaxInterceptors",function($window,$q,SERVER,$rootScope){
+    .factory("AjaxInterceptors",function(cfpLoadingBar){
         return {
             //成功请求
             'request' : function(config ){
-
+                cfpLoadingBar.start();
                 if(config.method == "POST"){
                     if(config.headers['is-mutile-data']){
                         delete config.headers['is-mutile-data'];
@@ -39,11 +39,14 @@ Micro
                 //        }
                 //    }
                 //}
+
+
                 return config ;
             },
 
             //成功返回
             response : function(response){
+                cfpLoadingBar.complete()
                 return response;
             }
 

@@ -5,5 +5,7 @@
  * @sherlock221b
  */
 var Micro = angular.module('Micro', [
-    'ui.router'
+    'ui.router',
+    'ngAnimate',
+    'angular-loading-bar'
 ]);

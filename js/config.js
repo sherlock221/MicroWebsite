@@ -53,6 +53,9 @@ Micro.config(function($httpProvider){
 });
 
 
+Micro.config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
+    cfpLoadingBarProvider.includeSpinner = true;
+}])
 
 //启动项
 Micro.run(function($rootScope,VERSION){
