@@ -205,7 +205,9 @@ header.fix-top {
 .card-list .head-size {
   width: 1.92rem;
   height: 1.92rem;
-  margin-right: 0.68267rem; }
+  margin-right: 0.68267rem;
+  border-radius: 100%;     overflow: hidden;
+}
 .card-list .card-item {
   border-radius: 10px;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.4);
