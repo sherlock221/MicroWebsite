@@ -22,6 +22,15 @@ Micro.config(
                   templateUrl: 'tpl/skin/skin-one.html?v='+VERSION.vs
                })
 
+
+              //首页
+              .state('app.s1.index',{
+                  url: '/index',
+                  templateUrl: 'tpl/index/index.html?v='+VERSION.vs,
+                  controller : "IndexCtrl"
+
+              })
+
               //list
               .state('app.s1.list',{
                   url: '/list',
@@ -30,30 +39,33 @@ Micro.config(
 
               //文字列表
               .state('app.s1.list.text',{
-                  url: '/text',
+                  url: '/text/:menuId',
                   views: {
                       "@app.s1": {
-                          templateUrl: 'tpl/list/list-text.html?v='+VERSION.vs
+                          templateUrl: 'tpl/list/list-text.html?v='+VERSION.vs,
+                          controller : "ListTextCtrl"
                       }
                   }
 
               })
 
               .state('app.s1.list.image',{
-                  url: '/image',
+                  url: '/image/:menuId',
                   views: {
                       "@app.s1": {
-                          templateUrl: 'tpl/list/list-image.html?v='+VERSION.vs
+                          templateUrl: 'tpl/list/list-image.html?v='+VERSION.vs,
+                          controller : "ListImageCtrl"
                       }
                   }
 
               })
 
               .state('app.s1.list.card',{
-                  url: '/card',
+                  url: '/card/:menuId',
                   views: {
                       "@app.s1": {
-                          templateUrl: 'tpl/list/list-card.html?v='+VERSION.vs
+                          templateUrl: 'tpl/list/list-card.html?v='+VERSION.vs,
+                          controller : "ListCardCtrl"
                       }
                   }
               })
@@ -67,7 +79,7 @@ Micro.config(
 
               //图标 menu
               .state('app.s1.menu.icon',{
-                  url: '/icon',
+                  url: '/icon/:menuId',
                   views: {
                       "@app.s1": {
                           controller : "MenuIconCtrl",
@@ -78,10 +90,10 @@ Micro.config(
               })
               //自定义 menu
               .state('app.s1.menu.custom',{
-                  url: '/icon',
-                  templateUrl: 'tpl/menu/menu-custom.html?v='+VERSION.vs
+                  url: '/icon/:menuId',
+                  templateUrl: 'tpl/menu/menu-custom.html?v='+VERSION.vs,
+                  controller : "MenuCustomCtrl"
               })
-
 
 
               //detai 图文混排
@@ -89,31 +101,30 @@ Micro.config(
                   url: '/detail',
                   abstract: true
               })
+
+
               .state('app.detail.imgText',{
-                  url: '/imgText',
+                  url: '/imgText/:menuId',
                   views : {
                       "@app" : {
-                          templateUrl: 'tpl/detail/detail-imgText.html?v='+VERSION.vs
+                          templateUrl: 'tpl/detail/detail-imgText.html?v='+VERSION.vs,
+                          controller : "DetailImgTextCtrl"
                       }
                   }
               })
 
               //第三方
               .state('app.contact',{
-                  url: '/contact',
+                  url: '/contact/:menuId',
                   views : {
                       "@app" : {
-                          templateUrl: 'tpl/third/contact.html?v='+VERSION.vs
+                          templateUrl: 'tpl/third/contact.html?v='+VERSION.vs,
+                          controller : "ConcatCtrl"
                       }
                   }
               })
 
-              //首页
-              .state('app.s1.index',{
-                  url: '/index',
-                  templateUrl: 'tpl/index/index.html?v='+VERSION.vs
 
-              });
 
           //index
           $urlRouterProvider.otherwise('/app/s1/index');

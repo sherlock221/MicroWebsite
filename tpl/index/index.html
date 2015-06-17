@@ -3,84 +3,15 @@
         <h5 class="ib welcome_img "></h5>
     </div>
 
-
-
     <ul class="menu clearFix">
-        <li>
-            <a  ui-sref="app.s1.list.text" href="javascript:void(0);" class="bg-light-green fx-row fx-row-center fx-row-middle ">
-                <span class="block icon-house icon fx-col-center "></span>
+        <li ng-repeat="menu in menuList">
+            <a     href="javascript:void(0);"  ng-click="goMenu(menu)"  ng-style={'backgroundColor':menu.iconColor}     class=" fx-row fx-row-center fx-row-middle ">
+                <span class="block {{menu.iconName}}  icon fx-col-center "  ></span>
             </a>
             <div class="font-desc text-center">
-                园所概况
+                {{menu.menuName}}
             </div>
         </li>
-        <li>
-            <a ui-sref="app.s1.list.text"  class="bg-light-red fx-row fx-row-center fx-row-middle">
-                <span class="block icon-treatment icon fx-col-center "></span>
-            </a>
-
-            <div class="font-desc text-center">
-                卫生保健
-            </div>
-        </li>
-        <li>
-            <a ui-sref="app.s1.list.card"  class="bg-light-og fx-row fx-row-center fx-row-middle">
-                <span class="block icon-teacher icon fx-col-center "></span>
-            </a>
-
-            <div class="font-desc text-center">
-                教师风采
-            </div>
-        </li>
-        <li>
-            <a  ui-sref="app.s1.list.image"  class="bg-light-yellow fx-row fx-row-center fx-row-middle">
-                <span class="block icon-letter icon fx-col-center "></span>
-            </a>
-
-            <div class="font-desc text-center">
-                特色课程
-            </div>
-        </li>
-        <li>
-            <a href="" class="bg-light-yellow fx-row fx-row-center fx-row-middle">
-                <span class="block icon-puzzle icon fx-col-center "></span>
-            </a>
-
-            <div class="font-desc text-center">
-                亲子乐园
-            </div>
-        </li>
-
-        <li>
-            <a href="#/app/contact" class="bg-light-purple fx-row fx-row-center fx-row-middle">
-                <span class="block icon-share icon fx-col-center "></span>
-            </a>
-
-            <div class="font-desc text-center">
-                班级信息
-            </div>
-        </li>
-
-        <li>
-            <a  ui-sref="app.s1.menu.icon"    class="bg-green fx-row fx-row-center fx-row-middle">
-                <span class="block icon-compass icon fx-col-center "></span>
-            </a>
-
-            <div class="font-desc text-center">
-                入园指南
-            </div>
-        </li>
-
-        <li>
-            <a ui-sref="app.contact"   class="bg-light-blue fx-row fx-row-center fx-row-middle">
-                <span class="block icon-telbook icon fx-col-center "></span>
-            </a>
-
-            <div class="font-desc text-center">
-                联系我们
-            </div>
-        </li>
-
-
     </ul>
 </section>
+

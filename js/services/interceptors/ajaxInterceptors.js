@@ -8,37 +8,31 @@ Micro
             //成功请求
             'request' : function(config ){
                 cfpLoadingBar.start();
-                if(config.method == "POST"){
-                    if(config.headers['is-mutile-data']){
-                        delete config.headers['is-mutile-data'];
-                    }
-                    else if(!config.headers['is-json-data'] ){
-                        config.headers['Content-Type'] = "application/x-www-form-urlencoded;charset=utf-8";
-                        config.transformRequest = function(obj) {
-                            var str = [];
-                            for(var p in obj)
-                                str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                            return str.join("&");
-                        }
-                    }
-                    else {
-                        delete config.headers['is-json-data'];
-                        config.headers['Content-Type'] = "application/json; charset=utf-8";
-                    }
-                }
 
-                //token代理
-                //if ($window.sessionStorage.token) {
-                //    if(config.method == "POST" ||  config.method == "PUT"){
-                //        config.data.token = $window.sessionStorage.token;
+                //if(config.method == "POST"){
+                //    if(config.headers['is-mutile-data']){
+                //        delete config.headers['is-mutile-data'];
                 //    }
-                //    else if(config.method = "GET"){
-                //        if( config.headers['Content-Type'] == "application/json"){
-                //            config.params =   config.params || {};
-                //            config.params.token = $window.sessionStorage.token;
+                //    else if(!config.headers['is-json-data'] ){
+                //        config.headers['Content-Type'] = "application/x-www-form-urlencoded;charset=utf-8";
+                //        config.transformRequest = function(obj) {
+                //            var str = [];
+                //            for(var p in obj)
+                //                str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                //            return str.join("&");
                 //        }
                 //    }
+                //    else {
+                //        delete config.headers['is-json-data'];
+                //        config.headers['Content-Type'] = "application/json; charset=utf-8";
+                //    }
                 //}
+
+                //token代理
+                if(config.method == "POST" ||  config.method == "PUT"){
+                    config.data.data = config.data.data || {};
+                    config.data.data.validId = localStorage.getItem("validId");
+                }
 
 
                 return config ;

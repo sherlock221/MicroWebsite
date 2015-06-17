@@ -1,108 +1,14 @@
 <div class="mt-content-list">
     <ul class="image-list">
-    <li class="image-item">
-        <a ui-sref="app.detail.imgText">
+    <li class="image-item" ng-repeat="img in imgList">
+        <a  href="#app/detail/imgText/{{img.id}}">
             <img-lazy width="100%"  >
-                <img  src = "imgs/bg/bg01.jpg"  class="response-img"/>
+                    <img  ng-src = "{{img.titleImgUrl}}"   style="height: 200px;" class="response-img"/>
             </img-lazy>
 
-            <h5 class="art-font">艺术课程</h5>
+            <h5 class="art-font">{{img.title}}</h5>
         </a>
     </li>
-        <li class="image-item">
-            <a href="">
-
-                <img-lazy width="100%"  >
-                    <img  src = "imgs/bg/bg01.jpg"  class="response-img"/>
-                </img-lazy>
-
-
-                <h5 class="art-font">艺术课程</h5>
-            </a>
-        </li>
-        <li class="image-item">
-            <a ui-sref="app.detail.imgText">
-               <img-lazy width="100%"  >                 <img  src = "imgs/bg/bg01.jpg"  class="response-img"/>             </img-lazy> 
-
-                <h5 class="art-font">艺术课程</h5>
-            </a>
-        </li>
-
-        <li class="image-item">
-            <a ui-sref="app.detail.imgText">
-               <img-lazy width="100%"  >                 <img  src = "imgs/bg/bg01.jpg"  class="response-img"/>             </img-lazy> 
-
-                <h5 class="art-font">艺术课程</h5>
-            </a>
-        </li>
-
-        <li class="image-item">
-            <a ui-sref="app.detail.imgText">
-               <img-lazy width="100%"  >                 <img  src = "imgs/bg/bg01.jpg"  class="response-img"/>             </img-lazy> 
-
-                <h5 class="art-font">艺术课程</h5>
-            </a>
-        </li>
-        <li class="image-item">
-            <a ui-sref="app.detail.imgText">
-               <img-lazy width="100%"  >                 <img  src = "imgs/bg/bg01.jpg"  class="response-img"/>             </img-lazy> 
-
-                <h5 class="art-font">艺术课程</h5>
-            </a>
-        </li>
-
-        <li class="image-item">
-            <a ui-sref="app.detail.imgText">
-               <img-lazy width="100%"  >                 <img  src = "imgs/bg/bg01.jpg"  class="response-img"/>             </img-lazy> 
-
-                <h5 class="art-font">艺术课程</h5>
-            </a>
-        </li>
-        <li class="image-item">
-            <a ui-sref="app.detail.imgText">
-               <img-lazy width="100%"  >                 <img  src = "imgs/bg/bg01.jpg"  class="response-img"/>             </img-lazy> 
-
-                <h5 class="art-font">艺术课程</h5>
-            </a>
-        </li>
-
-        <li class="image-item">
-            <a ui-sref="app.detail.imgText">
-               <img-lazy width="100%"  >                 <img  src = "imgs/bg/bg01.jpg"  class="response-img"/>             </img-lazy> 
-
-                <h5 class="art-font">艺术课程</h5>
-            </a>
-        </li>
-        <li class="image-item">
-            <a ui-sref="app.detail.imgText">
-               <img-lazy width="100%"  >                 <img  src = "imgs/bg/bg01.jpg"  class="response-img"/>             </img-lazy> 
-
-                <h5 class="art-font">艺术课程</h5>
-            </a>
-        </li>
-
-        <li class="image-item">
-            <a ui-sref="app.detail.imgText">
-               <img-lazy width="100%"  >                 <img  src = "imgs/bg/bg01.jpg"  class="response-img"/>             </img-lazy> 
-
-                <h5 class="art-font">艺术课程</h5>
-            </a>
-        </li>
-        <li class="image-item">
-            <a ui-sref="app.detail.imgText">
-               <img-lazy width="100%"  >                 <img  src = "imgs/bg/bg01.jpg"  class="response-img"/>             </img-lazy> 
-
-                <h5 class="art-font">艺术课程</h5>
-            </a>
-        </li>
-
-        <li class="image-item">
-            <a ui-sref="app.detail.imgText">
-               <img-lazy width="100%"  >                 <img  src = "imgs/bg/bg01.jpg"  class="response-img"/>             </img-lazy> 
-
-                <h5 class="art-font">艺术课程</h5>
-            </a>
-        </li>
 
 </ul>
 </div>

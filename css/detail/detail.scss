@@ -1,11 +1,18 @@
 .detail{
   padding: rem(36);
+  img{
+
+  }
 }
 .detail-imgText{
     background: #ffffff;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
 
    .title{
      font-size: rem(44);
+     text-align: left;
      color: #3d3d3d;
      font-weight: bold;
    }
@@ -25,5 +32,9 @@
   .mt-img{
     margin-top: rem(32);
     margin-bottom: rem(32);
+  }
+  img{
+    text-align: center;
+    display: inline-block;
   }
 }
