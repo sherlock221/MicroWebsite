@@ -23,7 +23,6 @@ Micro.controller('MainCtrl', function($scope,$rootScope,$location,$state,SERVER,
     Util.setLg("validId",validId);
 
 
-
     $rootScope.goMenu = function(menu){
         var st = Util.toURlState(menu.menuUrl);
         $state.go(st,{
