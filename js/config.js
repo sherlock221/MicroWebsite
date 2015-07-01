@@ -20,7 +20,8 @@ Micro.constant("SERVER", {
         //文件上传
         file : "http://10.10.68.11:10000/file",
         //微官网地址
-        micro : "http://imzhiliao.com/node-sev/MicroWebsite/start.html"
+        //micro : "http://imzhiliao.com/node-sev/MicroWebsite/start.html"
+        micro : "http://10.10.68.11/MicroWebsite/start.html?validId=1"
     },
 
     //预发布

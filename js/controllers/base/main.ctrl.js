@@ -9,6 +9,7 @@ Micro.controller('MainCtrl', function($scope,$rootScope,$location,$state,SERVER,
 
     //获得url参数
 
+
     var paramsUrl;
     if ($location.$$absUrl.indexOf("#") == -1) {
         paramsUrl = $location.$$absUrl.substring($location.$$absUrl.indexOf("?") + 1, $location.$$absUrl.length);
@@ -29,6 +30,9 @@ Micro.controller('MainCtrl', function($scope,$rootScope,$location,$state,SERVER,
             menuId : menu.id
         });
     }
+
+
+
 
     //$scope.$on('$stateChangeStart',
     //    function(event, toState, toParams, fromState, fromParams){

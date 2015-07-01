@@ -27,7 +27,8 @@ Micro.config(
               .state('app.s1.index',{
                   url: '/index',
                   templateUrl: 'tpl/index/index.html?v='+VERSION.vs,
-                  controller : "IndexCtrl"
+                  controller : "IndexCtrl",
+                  data : { pageTitle: 'Index' }
 
               })
 
@@ -45,7 +46,8 @@ Micro.config(
                           templateUrl: 'tpl/list/list-text.html?v='+VERSION.vs,
                           controller : "ListTextCtrl"
                       }
-                  }
+                  },
+                  data : { pageTitle: '列表' }
 
               })
 
