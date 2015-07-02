@@ -7,9 +7,8 @@
                 <h5 class="fx-col">{{txt.title}}</h5>
                 <i class="icon arrow-right fx-col-center"></i>
             </div>
-            <p>
-                {{txt.content}}
-            </p>
+            <div class="panel-item-content" ng-bind-html="txt.content"></div>
+
         </a>
     </li>
 </ul>

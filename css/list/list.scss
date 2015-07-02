@@ -13,6 +13,8 @@
 
     a{
       display: block;
+      font-size: rem(28);
+      color: #747474;
     }
     .title{
       h5{
@@ -23,9 +25,9 @@
       margin:  rem(20) 0 ;
     }
 
-    p{
-     font-size: rem(28);
-     color: #747474;
+    & > .panel-item-content{
+
+
       line-height: rem(38);
       letter-spacing: rem(2);
       margin-bottom: rem(10);

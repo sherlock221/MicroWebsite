@@ -7,5 +7,6 @@
 var Micro = angular.module('Micro', [
     'ui.router',
     'ngAnimate',
+    'ngSanitize',
     'angular-loading-bar'
 ]);

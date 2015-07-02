@@ -188,16 +188,16 @@ header.fix-top {
   background: #fff;
   margin-bottom: 0.64rem; }
   .panel-list .panel-item a {
-    display: block; }
+    display: block;
+    font-size: 0.59733rem;
+    color: #747474; }
   .panel-list .panel-item .title {
     margin: 0.42667rem 0; }
     .panel-list .panel-item .title h5 {
       font-size: 0.768rem;
       font-weight: bold;
       color: #22292c; }
-  .panel-list .panel-item p {
-    font-size: 0.59733rem;
-    color: #747474;
+  .panel-list .panel-item > .panel-item-content {
     line-height: 0.81067rem;
     letter-spacing: 0.04267rem;
     margin-bottom: 0.21333rem; }

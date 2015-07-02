@@ -4,13 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <meta name="format-detection" content="telphone=no, email=no"/>
-    <title>{{$root.pageTitle}}</title>
+    <title ng-bind="$root.pageTitle"></title>
 
     <!-- 防止缓存 -->
     <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
     <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
     <meta HTTP-EQUIV="Expires" CONTENT="0">
-
 
 
 
@@ -25,6 +24,7 @@
     <script type="text/javascript" src="lib/angular/angular-ui-router.min.js"></script>
     <script type="text/javascript" src="lib/angular/angular-animate.min.js"></script>
     <script type="text/javascript" src="lib/angular/loadingBar/loading-bar.min.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-sanitize.min.js"></script>
 
     <!-- 配置 -->
     <script type="text/javascript"  src="js/app.js"></script>
