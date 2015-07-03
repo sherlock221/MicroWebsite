@@ -5,7 +5,8 @@
 
 //常量配置
 Micro.constant("VERSION",{
-    vs : "101"
+    vs : "101",
+    ak : "oz0FR1eaX67iIqN9H6KY4dAk"
 });
 
 Micro.constant("SERVER", {
