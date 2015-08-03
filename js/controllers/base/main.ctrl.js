@@ -2,7 +2,7 @@
  * 图文混排详情
  */
 
-Micro.controller('MainCtrl', function($scope,$rootScope,$location,$state,VERSION,SERVER,Util,cfpLoadingBar) {
+Micro.controller('MainCtrl', function($scope,$rootScope,$location,$state,MicroSev,VERSION,SERVER,Util,cfpLoadingBar) {
     $rootScope.showHeader =  true;
 
     SERVER.url  = SERVER.formalUrl;
@@ -30,9 +30,17 @@ Micro.controller('MainCtrl', function($scope,$rootScope,$location,$state,VERSION
         $state.go(st,{
             menuId : menu.id
         });
+
+        $rootScope.pageTitle = menu.menuName;
     }
 
 
+    //查询幼儿园名称
+    MicroSev.getEmapNameByValidId(validId).then(function(res){
+        $rootScope.pageTitle =  $rootScope.microName =  res.bizData.emapName;
+    },function(){
+
+    });
 
 
     //$scope.$on('$stateChangeStart',
@@ -44,7 +52,7 @@ Micro.controller('MainCtrl', function($scope,$rootScope,$location,$state,VERSION
     //
     //$scope.$on('$stateChangeSuccess',
     //    function(event, toState, toParams, fromState, fromParams){
-    //        cfpLoadingBar.complete();
+    //        console.log(toState);
     //        console.log("success...");
     //    })
     //

@@ -67,6 +67,27 @@ Micro
                     });
 
                 return defer.promise;
+            },
+
+            getEmapNameByValidId : function(validId){
+                var data = {
+                    "style": "",
+                    "data": {
+                        validId :validId
+                    },
+                    "clientInfo": {}
+                };
+                var defer = $q.defer();
+                $http.post(SERVER.url.mp+"/public/osMenu/getEmapNameByValidId ",data
+                )
+                    .success(function(result){
+                        defer.resolve(result);
+                    })
+                    .error(function(err){
+                        defer.reject(err);
+                    });
+
+                return defer.promise;
             }
 
         }

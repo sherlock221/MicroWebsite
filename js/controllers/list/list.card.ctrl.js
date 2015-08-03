@@ -3,7 +3,6 @@
  */
 
 Micro.controller('ListCardCtrl', function($scope,$stateParams,$state,$rootScope,Util,MicroSev) {
-    console.log("list > card >...");
 
 
     var menuId = $stateParams.menuId;
@@ -21,7 +20,6 @@ Micro.controller('ListCardCtrl', function($scope,$stateParams,$state,$rootScope,
 
 
     $scope.goCardDetail = function(card){
-
             Util.setLgObj("detail",card);
             $state.go("app.s1.card");
     }

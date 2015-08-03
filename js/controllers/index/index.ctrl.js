@@ -5,7 +5,7 @@
 Micro.controller('IndexCtrl', function($scope,$rootScope,$state,Util,MicroSev) {
     console.log("index....");
 
-    $rootScope.pageTitle = "首页";
+    $rootScope.pageTitle = $rootScope.microName;
 
     $scope.menuList =  [];
 
