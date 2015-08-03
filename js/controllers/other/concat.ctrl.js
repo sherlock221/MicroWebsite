@@ -36,6 +36,8 @@ Micro.controller('ConcatCtrl', function($scope,$rootScope,$stateParams,MicroSev,
                 var point = new BMap.Point(mapPointY, mapPointX); // 创建点坐标
                 map.centerAndZoom(point,15);                 // 初始化地图,设置中心点坐标和地图级别。
                 map.addControl(new BMap.ZoomControl());      //添加地图缩放控件
+                var marker = new BMap.Marker(point);
+                map.addOverlay(marker);
             }else{
                 return;
             }
