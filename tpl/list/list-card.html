@@ -1,24 +1,19 @@
 <div class="mt-content-list">
     <ul class="card-list">
-    <li class="card-item" ng-repeat="card in cardList " >
 
-        <div class="fx-row">
-            <div class="head-size">
+    <li class="card-item text-ellipsis" ng-repeat="card in cardList " >
+        <a class="block" ng-click="goCardDetail(card)">
+            <div class="head-size ib">
                 <img-lazy width="100%"  >
-                    <img  ng-src="{{card.photoImgUrl}}"    />
+                    <img  ng-src="{{card.photoImgUrl}}"  class="ib"   />
                 </img-lazy>
             </div>
 
-                <div class="fx-col fx-col-center">
-                    <h5>{{card.teacherName}}</h5>
-                    <div>
-                        <span class="label">{{card.jobType}}</span>
-                    </div>
-                </div>
-        </div>
 
-            <p ng-bind-html="card.teacherDesc">
-            </p>
+            <h5 class="text-ellipsis">{{card.teacherName}}</h5>
+            <div class="label text-ellipsis">{{card.jobType ? card.jobType : "无"}}</div>
+
+        </a>
     </li>
 
 </ul>

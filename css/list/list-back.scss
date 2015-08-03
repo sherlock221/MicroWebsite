@@ -39,51 +39,33 @@
 
 //卡片list
 .card-list{
-  overflow: hidden;
-  clear: both;
 
   .head-size{
     width: rem(90);
     height: rem(90);
+    margin-right: rem(32);
     border-radius: 100%;
     overflow: hidden;
   }
   .card-item{
-    width: 33.333%;
-
+    border-radius: 10px;
+    box-shadow:0px 1px 4px 0px rgba(0, 0, 0, 0.4);
+    padding: rem(30);
+    background: #fff;
+    margin-bottom: rem(30);
     a{
-      border-radius: 10px;
-      box-shadow:0px 1px 4px 0px rgba(0, 0, 0, 0.4);
-      padding: rem(20) rem(10);
-      margin: rem(15) rem(15);
-      background: #fff;
-
-
-
-      @include transition(all 0.5s ease );
-
-      &:active{
-        background: #eaeaea;
-      }
+      display: block;
     }
-
-
-    text-align: center;
-    float: left;
-
-
     h5{
       font-size: rem(32);
       font-weight: bold;
       color: #22292c;
       margin-bottom: rem(8);
-      margin-top: 6px;
     }
 
     .label{
       color: #bcbcbc;
       font-size: rem(28);
-      margin-top: 5px;
     }
 
     p{
@@ -96,8 +78,6 @@
     }
   }
 }
-
-
 
 
 //图片

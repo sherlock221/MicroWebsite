@@ -2,12 +2,12 @@
     <ul class="panel-list">
 
     <li class="panel-item" ng-repeat="txt in textList">
-        <a ui-sref="app.detail.imgText">
+        <a href="javascript:void(0)" ng-click="goDetail(txt);">
             <div class="title fx-row">
                 <h5 class="fx-col">{{txt.title}}</h5>
                 <i class="icon arrow-right fx-col-center"></i>
             </div>
-            <div class="panel-item-content" ng-bind-html="txt.content"></div>
+            <div class="panel-item-content" ng-bind-html="txt.summaryContent"></div>
 
         </a>
     </li>

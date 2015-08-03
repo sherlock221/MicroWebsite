@@ -2,14 +2,15 @@
  * 图文混排详情
  */
 
-Micro.controller('MainCtrl', function($scope,$rootScope,$location,$state,SERVER,Util,cfpLoadingBar) {
+Micro.controller('MainCtrl', function($scope,$rootScope,$location,$state,VERSION,SERVER,Util,cfpLoadingBar) {
     $rootScope.showHeader =  true;
 
-    SERVER.url  = SERVER.testUrl;
+    SERVER.url  = SERVER.formalUrl;
+    $rootScope.VERSION  = VERSION;
+
+
 
     //获得url参数
-
-
     var paramsUrl;
     if ($location.$$absUrl.indexOf("#") == -1) {
         paramsUrl = $location.$$absUrl.substring($location.$$absUrl.indexOf("?") + 1, $location.$$absUrl.length);

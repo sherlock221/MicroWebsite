@@ -1,0 +1,25 @@
+<div class="card-detail">
+
+
+    <ul class="card-list mt20">
+        <li class="card-detail-item">
+            <div class="fx-row">
+                <div class="head-size">
+                    <img-lazy width="100%"  >
+                        <img  ng-src="{{detail.photoImgUrl}}"    />
+                    </img-lazy>
+                </div>
+
+                    <div class="fx-col fx-col-center">
+                        <h5>{{detail.teacherName}}</h5>
+                        <div>
+                            <span class="label">{{detail.jobType}}</span>
+                        </div>
+                    </div>
+            </div>
+            <p ng-bind-html="detail.teacherDesc">
+            </p>
+    </li>
+
+</ul>
+</div>

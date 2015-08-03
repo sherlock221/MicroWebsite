@@ -5,8 +5,7 @@
 
 //常量配置
 Micro.constant("VERSION",{
-    vs : "101",
-    ak : "oz0FR1eaX67iIqN9H6KY4dAk"
+    vs : "101"
 });
 
 Micro.constant("SERVER", {
@@ -27,7 +26,7 @@ Micro.constant("SERVER", {
 
     //预发布
     formalUrl : {
-        mp  : "http://emap.imzhiliao.com:9000/emap",
+        mp  : "http://www.imteachers.cn",
         file : "http://10.10.68.11:10000/file",
         //微官网地址
         micro : "http://imzhiliao.com/node-sev/MicroWebsite/start.html"

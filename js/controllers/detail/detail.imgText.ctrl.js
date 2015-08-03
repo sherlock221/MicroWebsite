@@ -6,13 +6,12 @@ Micro.controller('DetailImgTextCtrl', function($scope,$rootScope,$stateParams,Ut
 
     console.log("detail > imgText ");
 
+     $scope.detail;
+
     var menuId = $stateParams.menuId;
     console.log($stateParams.menuId);
 
 
-    $scope.detail;
-
-    
     var loadSub = function(menuId){
         //查询子菜单
         MicroSev.getSubMicro(menuId).then(function(res){
@@ -20,5 +19,24 @@ Micro.controller('DetailImgTextCtrl', function($scope,$rootScope,$stateParams,Ut
         });
     }
 
-    loadSub(menuId);
+
+    if(!menuId){
+        var detail = Util.getLgObj("detail");
+        $scope.detail = detail;
+    }
+    else{
+
+        loadSub(menuId);
+
+    }
+
+
+
+
+
+
+
+
+
+
 });

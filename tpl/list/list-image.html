@@ -1,9 +1,9 @@
 <div class="mt-content-list">
     <ul class="image-list">
     <li class="image-item" ng-repeat="img in imgList">
-        <a  href="#app/detail/imgText/{{img.id}}">
+        <a    ng-click="goDetail(img)" href="javascript:void(0);">
             <img-lazy width="100%"  >
-                    <img  ng-src = "{{img.titleImgUrl}}"   style="height: 200px;" class="response-img"/>
+                    <img  ng-src = "{{img.titleImgUrl}}"   style="height: 150px;" class="response-img"/>
             </img-lazy>
 
             <h5 class="art-font">{{img.title}}</h5>

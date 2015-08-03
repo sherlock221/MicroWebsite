@@ -19,6 +19,7 @@
     <link rel="stylesheet"   href="css/all.css" />
 
 
+
     <!-- angular主库 -->
     <script type="text/javascript" src="lib/angular/angular.min.js"></script>
     <script type="text/javascript" src="lib/angular/angular-ui-router.min.js"></script>
@@ -31,8 +32,7 @@
     <script type="text/javascript"  src="js/config.js"></script>
     <script type="text/javascript"  src="js/config.router.js"></script>
 
-    <!--baidumapapi引入-->
-    <script type="text/javascript" src="http://api.map.baidu.com/api?type=quick&ak=oz0FR1eaX67iIqN9H6KY4dAk&v=1.0"></script>
+
 
     <!-- 拦截器 -->
     <script type="text/javascript" src="js/services/interceptors/ajaxInterceptors.js"></script>
@@ -41,36 +41,27 @@
     <script type="text/javascript" src="js/dirs/imglazy.dir.js"></script>
 
     <!-- 模板 -->
-    <script  type="text/javascript" src="js/controllers/base/main.ctrl.js"></script>
-    <script  type="text/javascript" src="js/controllers/index/index.ctrl.js"></script>
-    <script  type="text/javascript" src="js/controllers/list/list.card.ctrl.js"></script>
-    <script  type="text/javascript" src="js/controllers/list/list.image.ctrl.js"></script>
-    <script  type="text/javascript" src="js/controllers/list/list.text.ctrl.js"></script>
+    <script  type="text/javascript" src="js/controllers/base/main.ctrl.js?v=102"></script>
+    <script  type="text/javascript" src="js/controllers/index/index.ctrl.js?v=102"></script>
+    <script  type="text/javascript" src="js/controllers/list/list.card.ctrl.js?v=102"></script>
+    <script  type="text/javascript" src="js/controllers/list/list.image.ctrl.js?v=102"></script>
+    <script  type="text/javascript" src="js/controllers/list/list.text.ctrl.js?v=102"></script>
 
 
-    <script  type="text/javascript" src="js/controllers/menu/menu.custome.ctrl.js"></script>
-    <script  type="text/javascript" src="js/controllers/menu/menu.icon.ctrl.js"></script>
-    <script  type="text/javascript" src="js/controllers/detail/detail.imgText.ctrl.js"></script>
-    <script  type="text/javascript" src="js/controllers/other/concat.ctrl.js"></script>
+    <script  type="text/javascript" src="js/controllers/menu/menu.custome.ctrl.js?v=102"></script>
+    <script  type="text/javascript" src="js/controllers/menu/menu.icon.ctrl.js?v=102"></script>
+    <script  type="text/javascript" src="js/controllers/detail/detail.imgText.ctrl.js?v=102"></script>
+    <script  type="text/javascript" src="js/controllers/other/concat.ctrl.js?v=102"></script>
 
 
     <!-- 服务 -->
-    <script type="text/javascript" src="js/services/common/util.sev.js"></script>
-    <script type="text/javascript" src="js/services/micro/micro.sev.js"></script>
+    <script type="text/javascript" src="js/services/common/util.sev.js?v=102"></script>
+    <script type="text/javascript" src="js/services/micro/micro.sev.js?v=102"></script>
 
 
     <!-- 打包业务-->
     <!--<script type="text/javascript" src="dist/js/all.js?v=8.3"></script>-->
 
-    <script type="text/javascript">
-        window.addEventListener('message', function(event) {
-                console.log(event.data);
-            if(event.data == "refresh"){
-                window.location.reload();
-            }
-        });
-
-    </script>
 
 </head>
 
@@ -92,4 +83,10 @@
         doc.addEventListener('DOMContentLoaded', recalc, false);
     })(document, window);
 </script>
+
+
+<!--baidumapapi引入-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?type=quick&ak=oz0FR1eaX67iIqN9H6KY4dAk&v=1.0"></script>
+
+
 </html>

@@ -115,6 +115,21 @@ Micro.config(
                   }
               })
 
+
+              //卡片详情
+              .state('app.s1.card',{
+                  url: '/card',
+                  views : {
+                      "@app.s1" : {
+                          templateUrl: 'tpl/detail/detail-card.html?v='+VERSION.vs,
+                          controller : "DetailImgTextCtrl"
+                      }
+                  }
+              })
+
+
+
+
               //第三方
               .state('app.contact',{
                   url: '/contact/:menuId',

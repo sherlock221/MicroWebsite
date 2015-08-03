@@ -2,7 +2,7 @@
  * Text 文字列表
  */
 
-Micro.controller('ListTextCtrl', function($scope,$stateParams,$rootScope,Util,MicroSev) {
+Micro.controller('ListTextCtrl', function($scope,$state,$stateParams,$rootScope,Util,MicroSev) {
     console.log("list > text ...");
 
     var menuId = $stateParams.menuId;
@@ -15,6 +15,12 @@ Micro.controller('ListTextCtrl', function($scope,$stateParams,$rootScope,Util,Mi
         MicroSev.getSubMicro(menuId).then(function(res){
             $scope.textList  = res.bizData;
         });
+    }
+
+    //前往详情
+    $scope.goDetail = function(detail){
+        Util.setLgObj("detail",detail);
+        $state.go("app.detail.imgText");
     }
 
     loadSub(menuId);
