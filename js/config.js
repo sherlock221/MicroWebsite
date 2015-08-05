@@ -47,3 +47,7 @@ Micro.config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
 Micro.run(function($rootScope,VERSION){
     $rootScope.VERSION = VERSION;
 });
+
+
+
+

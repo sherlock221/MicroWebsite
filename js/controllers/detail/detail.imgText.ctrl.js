@@ -22,6 +22,7 @@ Micro.controller('DetailImgTextCtrl', function($scope,$rootScope,$stateParams,Ut
 
     if(!menuId){
         var detail = Util.getLgObj("detail");
+        console.log(detail.content);
         $scope.detail = detail;
     }
     else{

@@ -8,9 +8,15 @@ Micro.controller('ListTextCtrl', function($scope,$state,$stateParams,$rootScope,
     var menuId = $stateParams.menuId;
     console.log($stateParams.menuId);
 
+
+
+
     $scope.textList =  [];
 
     var loadSub = function(menuId){
+
+
+
         //查询子菜单
         MicroSev.getSubMicro(menuId).then(function(res){
             $scope.textList  = res.bizData;
@@ -19,6 +25,10 @@ Micro.controller('ListTextCtrl', function($scope,$state,$stateParams,$rootScope,
 
     //前往详情
     $scope.goDetail = function(detail){
+
+        console.log(detail.content);
+
+
         Util.setLgObj("detail",detail);
         $state.go("app.detail.imgText");
     }

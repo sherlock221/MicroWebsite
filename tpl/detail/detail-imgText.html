@@ -13,7 +13,7 @@
     <!--<div ng-bind="detail.content"></div>-->
 
     <div class="text-left">
-            <div ng-bind-html="detail.content">
+            <div ng-bind-html="detail.content | trustHtml">
 
             </div>
 
