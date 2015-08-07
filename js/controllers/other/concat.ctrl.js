@@ -16,11 +16,11 @@ Micro.controller('ConcatCtrl', function($scope,$rootScope,$stateParams,MicroSev,
     var load = function(){
         MicroSev.getSubMicro(menuId).then(function(res){
             $scope.concat = res.bizData;
-            if(!$scope.concat.latitude){
-                alert("地址信息格式不对!");
-                return;
-            }
-            showMap($scope.concat.latitude,$scope.concat.longitude);
+            //if(!$scope.concat.latitude){
+            //    alert("地址信息格式不对!");
+            //    return;
+            //}
+            //showMap($scope.concat.latitude,$scope.concat.longitude);
         });
     }
 
